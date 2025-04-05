@@ -35,7 +35,7 @@ export const Homepage = () => {
           </div>
           <div className="page__category">
             <Category
-              img="img/other/tablets-category.png"
+              img="./img/other/tablets-category.png"
               title="Tablets"
               amount={95}
             />
