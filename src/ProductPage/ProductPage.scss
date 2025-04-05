@@ -1,5 +1,5 @@
-@import '../utils/variables';
-@import '../utils/mixins';
+@use '../utils' as *;
+
 
 .product-page {
     &__buttons {
@@ -25,16 +25,16 @@
          }
  
          &--previous {
-             background-image: url('../../public/img/logos/left-arrow-logo.png');
+             background-image: url('/img/logos/left-arrow-logo.png');
          }
          &--next {
-             background-image: url('../../public/img/logos/right-arrow-logo.png');
+             background-image: url('/img/logos/right-arrow-logo.png');
          }
      }
     &__container {
-        @include page-grid;
-
         padding-inline: 16px;
+
+        @include page-grid;
 
         @include on-desktop {
             padding: 0;
@@ -59,14 +59,13 @@
         grid-column: 1 /-1;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(230px, 287px));
+        gap: 40px 16px;
+        justify-content: center;
+        justify-items: center;
         
         @include on-desktop {
             grid-template-columns: repeat(4, minmax(230px, 287px));
         }
-
-        gap: 40px 16px;
-        justify-content: center;
-        justify-items: center;
     }
 
     &__label-for-select {

@@ -1,6 +1,5 @@
+@use '../utils' as *;
 
-@import '../utils/variables';
-@import '../utils/mixins';
 
 
 .page {
@@ -40,28 +39,27 @@
         cursor: pointer;
         &--active {
             background-color: $page-background-color;
-            &:hover {
-                transform: scale(1.05);
-            }
+            
+            @include hover-and-active-for-buttons;
         }
 
         &--previous {
-            background-image: url('../../public/img/logos/left-arrow-logo.png');
+            background-image: url('./img/logos/left-arrow-logo.png');
         }
         &--next {
-            background-image: url('../../public/img/logos/right-arrow-logo.png');
+            background-image: url('./img/logos/right-arrow-logo.png');
         }
     }
 
     &__new-models-products {
-        @include on-tablet {
-            grid-column: 1 / -1;
-        }
-
         overflow: hidden;
         display: flex;
         gap: 16px;
         padding: 16px 0;
+        
+        @include on-tablet {
+            grid-column: 1 / -1;
+        }
     }
 
     &__category__container {

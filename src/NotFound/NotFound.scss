@@ -1,4 +1,5 @@
-@import '../utils/variables';
+@use '../utils' as *;
+
 
 .not-found {
     text-align: center;

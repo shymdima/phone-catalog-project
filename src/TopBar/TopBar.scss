@@ -1,5 +1,5 @@
-@import '../utils/variables';
-@import '../utils/mixins';
+@use '../utils' as *;
+
 
 .topbar {
     padding-left: $padding-var;
@@ -28,17 +28,16 @@
     &__button {
         width: 48px;
         height: 48px;
-
-        @include on-desktop {
-            width: 64px;
-            height: 64px;
-        }
-
         display: flex;
         align-items: center;
         justify-content: center;
         border-left: $border-grey;
         position: relative;
+        
+        @include on-desktop {
+            width: 64px;
+            height: 64px;
+        }
     }
 
     &__bread-crumbs{
@@ -189,13 +188,13 @@
             border-left: $border-grey;
             height: 48px;
             width: 48px;
-            background-image: url(/public/img/logos/menu-logo.png);
+            background-image: url('/img/logos/menu-logo.png');
         }
         &--favorites{
-            background-image: url(/public/img/logos/heart-logo.png);
+            background-image: url('/img/logos/heart-logo.png');
         }
         &--cart {
-            background-image: url(/public/img/logos/cart-logo.png);
+            background-image: url('/img/logos/cart-logo.png');
         }
     
     }

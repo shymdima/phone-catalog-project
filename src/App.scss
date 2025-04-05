@@ -1,12 +1,12 @@
 
-@import './utils/variables';
-@import './utils/mixins';
+@use './utils' as *;
+
 
 @font-face {
     font-family: Mont;
-    src: url('../public/fonts/Mont-Bold.otf');
-    src: url('../public/fonts/Mont-Regular.otf');
-    src: url('../public/fonts/Mont-SemiBold.otf');
+    src: url('/fonts/Mont-Bold.otf');
+    src: url('/fonts/Mont-Regular.otf');
+    src: url('/fonts/Mont-SemiBold.otf');
 }
 
 html {
@@ -44,6 +44,10 @@ body {
         grid-column: 1 / -1;
         font-size: 48px;
     }
+
+    &-for-test {
+        display: none;
+    }
 }
 
 .text {
@@ -73,4 +77,5 @@ body {
         @include page-grid;
     }
 }
+
 

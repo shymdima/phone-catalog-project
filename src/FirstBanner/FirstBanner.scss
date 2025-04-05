@@ -1,6 +1,6 @@
 @use "sass:color";
-@import '../utils/variables';
-@import '../utils/mixins';
+@use '../utils' as *;
+
 
 
 .banner {
@@ -107,7 +107,7 @@
 
     &-image {
         background-repeat: no-repeat;
-        background-image: url('../../public/img/other/image-for-available.png');
+        background-image: url('/img/mobile-first-banner.png');
         aspect-ratio: 1 / 1;
         width: 100%;
     
@@ -115,7 +115,7 @@
         background-position: center;
 
         @include on-tablet {
-            background-image: url('../../public/img/other/new-banner.png');
+            background-image: url('/img/other/new-banner.png');
             grid-column: 2 / -2;
             width: 55%;
             background-position: right;

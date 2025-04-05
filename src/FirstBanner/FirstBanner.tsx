@@ -17,7 +17,7 @@ export const FirstBanner = () => {
         </Link>
       </div>
       <Link
-        to={'/phones/apple-iphone-14-pro-128gb-spaceblack'}
+        to={'./img/phones/apple-iphone-14-pro-128gb-spaceblack'}
         className="banner-image"
       ></Link>
     </div>

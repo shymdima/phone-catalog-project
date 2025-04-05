@@ -1,7 +1,6 @@
 import React, { useContext, useMemo, useState } from 'react';
 import { IconsBar } from '../IconsBar/IconsBar';
 import { ProductCard } from '../ProductCard/ProductCard';
-
 import './ProductPage.scss';
 import { ProductContext } from '../utils/contexts';
 import { ButtonWithNumber } from '../Button/Button';
