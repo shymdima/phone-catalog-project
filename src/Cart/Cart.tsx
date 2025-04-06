@@ -8,7 +8,7 @@ export const Cart = () => {
   const cartContext = useContext(CartContext);
 
   if (!cartContext) {
-    return;
+    return null;
   }
 
   const { cart } = cartContext;
@@ -22,24 +22,31 @@ export const Cart = () => {
       <div className="container">
         <IconsBar pageType="cart" />
         <h2 className="title">Cart</h2>
-        <div className="cart__cards">
-          {cart.map(cartProduct => (
-            <CartCard product={cartProduct} key={cartProduct.id} />
-          ))}
-        </div>
+        {cart.length === 0 ? (
+          <div className="cart__empty">
+          </div>
+        ) : (
+          <>
+            <div className="cart__cards">
+              {cart.map(cartProduct => (
+                <CartCard product={cartProduct} key={cartProduct.id} />
+              ))}
+            </div>
 
-        <div className="cart__checkout-block">
-          <span className="cart__price">
-            {`$${cart.reduce((acc, cartProduct) => acc + cartProduct.price * (cartProduct.quantity ?? 1), 0)}`}
-          </span>
+            <div className="cart__checkout-block">
+              <span className="cart__price">
+                {`$${cart.reduce((acc, cartProduct) => acc + cartProduct.price * (cartProduct.quantity ?? 1), 0)}`}
+              </span>
 
-          <span className="text">
-            {cartQuantity === 1
-              ? `Total for 1  item`
-              : `Total for ${cartQuantity} items`}
-          </span>
-          <button className="cart__button">Checkout</button>
-        </div>
+              <span className="text">
+                {cartQuantity === 1
+                  ? `Total for 1 item`
+                  : `Total for ${cartQuantity} items`}
+              </span>
+              <button className="cart__button">Checkout</button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

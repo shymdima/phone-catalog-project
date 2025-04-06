@@ -76,6 +76,11 @@ body {
 
         @include page-grid;
     }
+    
+    @include on-desktop {
+        padding-inline: 0;
+
+    }
 }
 
 

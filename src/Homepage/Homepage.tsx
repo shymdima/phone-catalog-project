@@ -2,16 +2,22 @@ import { Header } from '../Header/Header';
 import { Category } from '../Category/Category';
 import './Homepage.scss';
 import { useContext } from 'react';
-import { ProductContext } from '../utils/contexts';
+import { ProductContext, LoadingContext } from '../utils/contexts';
 import { RecommendedSlider } from '../RecommendedSlider/RecommendedSlider';
+import { Loader } from '../Loader/Loader';
 
 export const Homepage = () => {
+  const loading = useContext(LoadingContext);
   const phones = useContext(ProductContext)?.filter(
     product => product.category === 'phones',
   );
 
   const newModels =
     phones?.filter(phone => phone.name.includes('iPhone 14')) || [];
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <>

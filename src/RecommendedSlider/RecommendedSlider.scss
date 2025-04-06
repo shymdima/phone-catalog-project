@@ -81,7 +81,7 @@
   }
 
   @include on-desktop {
-    width: 287px;
+    width: $product-card-width-descktop;
   }
 }
 }

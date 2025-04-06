@@ -58,8 +58,9 @@
         color: #F1F2F9;
         font-size: 12px;
         font-weight: 800;
-
         text-decoration: none;
+
+        @include hover-for-links;
     }
     &__back-to-top {
         display: flex;

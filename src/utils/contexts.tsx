@@ -19,6 +19,7 @@ export const FavoritesContext = createContext<FavoritesContextType | null>(
 );
 export const CartContext = createContext<CartContextType | null>(null);
 export const ProductContext = createContext<Product[]>([]);
+export const LoadingContext = createContext<boolean>(true);
 
 export const ContextProvider = ({
   children,
@@ -41,6 +42,8 @@ export const ContextProvider = ({
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
@@ -52,6 +55,8 @@ export const ContextProvider = ({
   useEffect(() => {
     async function fetchData() {
       try {
+        setLoading(true);
+
         const [phonesData, tabletsData, accessoriesData, productsData] =
           await Promise.all([
             fetch('./api/phones.json').then(res => res.json()),
@@ -67,6 +72,8 @@ export const ContextProvider = ({
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error('data loading error', error);
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -80,7 +87,9 @@ export const ContextProvider = ({
           <ProductContext.Provider value={products}>
             <FavoritesContext.Provider value={{ favorites, setFavorites }}>
               <CartContext.Provider value={{ cart, setCart }}>
-                {children}
+                <LoadingContext.Provider value={loading}>
+                  {children}
+                </LoadingContext.Provider>
               </CartContext.Provider>
             </FavoritesContext.Provider>
           </ProductContext.Provider>

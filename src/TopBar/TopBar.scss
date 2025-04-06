@@ -108,8 +108,9 @@
         position: relative;
         &:not(.topbar__nav-link--active):hover {
             color: $white-color;
-            transform: scale(1.02);
+            
         }
+        
     
         &--active {
             color: $white-color;
@@ -122,6 +123,8 @@
               border-bottom: 3px solid $white-color;
             }
           }
+
+          
 
     }
     &__icon-number {

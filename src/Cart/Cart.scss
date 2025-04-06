@@ -2,6 +2,22 @@
 
 .cart {
     min-height: 100vh;
+    
+    &__empty {
+        margin-inline: auto;
+        width: 40vh;
+        height: 40vh;
+        background-image: url('/img/other/cart-is-empty.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        
+        @include on-tablet {
+            grid-column: 1 / -1;
+            width: 60vh;
+            height: 60vh;
+        }
+    }
     &__cards {
         display: flex;
         flex-direction: column;

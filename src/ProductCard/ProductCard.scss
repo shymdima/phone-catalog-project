@@ -16,7 +16,7 @@
     }
 
     @include on-desktop {
-        width: 272px;
+        width: $product-card-width-descktop;
         height: 506px;
     }
 

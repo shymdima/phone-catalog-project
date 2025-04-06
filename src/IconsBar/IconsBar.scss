@@ -28,30 +28,10 @@
     }
     &__breadcrumb-link {
         text-decoration: none;
-        position: relative;
         font-size: 12px;
         font-weight: 700;
         color: $grey-collor-for-text;
-        transition: 0.3s ease;
-        &:hover {
-            color:  #F1F2F9;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background-color: $white-color;
-            transition: width 0.3s ease-out, left 0.3s ease-out;
-        }
-    
-        &:hover::after {
-            width: 100%;
-            left: 0;
-        }
 
-       
+        @include hover-for-links;
     }
 }
