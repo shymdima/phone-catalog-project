@@ -51,7 +51,7 @@ export const RecommendedSlider: React.FC<RecommendedSliderProps> = ({
             })}
             onClick={scrollLeft}
           >
-            <img src="./img/logos/left-arrow-logo.png" alt="Previous" />
+            <img src="/img/logos/left-arrow-logo.png" alt="Previous" />
           </button>
           <button
             className={classNames('recommended-slider__recommend-bar-button', {
@@ -60,7 +60,7 @@ export const RecommendedSlider: React.FC<RecommendedSliderProps> = ({
             })}
             onClick={scrollRight}
           >
-            <img src="./img/logos/right-arrow-logo.png" alt="Next" />
+            <img src="/img/logos/right-arrow-logo.png" alt="Next" />
           </button>
         </div>
       </div>

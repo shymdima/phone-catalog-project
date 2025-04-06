@@ -20,7 +20,7 @@ export const TopBar = () => {
     <>
       <div className="topbar">
         <Link to="/" className="topbar__link">
-          <img src="./img/logos/header-logo.png" alt="logo" />
+          <img src="/img/logos/header-logo.png" alt="logo" />
         </Link>
         <div className="topbar__buttons-right">
           <Link to="/menu" className="topbar__icon topbar__icon--menu" />
@@ -29,7 +29,7 @@ export const TopBar = () => {
 
       <div className="topbar--for-wide-witdh">
         <Link to="/" className="topbar__link">
-          <img src="./img/logos/header-logo.png" alt="logo" />
+          <img src="/img/logos/header-logo.png" alt="logo" />
         </Link>
         <nav className="topbar__nav">
           <ul className="topbar__list">

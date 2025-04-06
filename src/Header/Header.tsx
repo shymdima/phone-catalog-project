@@ -74,7 +74,7 @@ export const Header = () => {
             className="header__button header__button--previous"
             onClick={changeImageLeft}
           >
-            <img src="./img/logos/left-arrow-logo.png" alt="Previous" />
+            <img src="/img/logos/left-arrow-logo.png" alt="Previous" />
           </button>
 
           <div
@@ -101,7 +101,7 @@ export const Header = () => {
             className="header__button header__button--next"
             onClick={changeImageRight}
           >
-            <img src="./img/logos/right-arrow-logo.png" alt="Next" />
+            <img src="/img/logos/right-arrow-logo.png" alt="Next" />
           </button>
         </div>
         <div className="header__dots-group">

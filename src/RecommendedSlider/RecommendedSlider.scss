@@ -45,8 +45,9 @@
         transition: 0.3s ease;
         &--active {
             background-color: #323542;
-            
-            @include hover-and-active-for-buttons;
+            &:hover {
+                transform: scale(1.05);
+            }
         }
        
     }
