@@ -112,14 +112,14 @@ export const ProductDetailsPage: React.FC<Props> = ({ productType }) => {
         <div className="product-details__top-part">
           <img
             className="product-details__image-large"
-            src={`/${imageLarge}`}
+            src={`./${imageLarge}`}
             alt=""
           />
 
           <div className="product-details__product-images">
             {images.map(image => (
               <img
-                src={`/${image}`}
+                src={`./${image}`}
                 alt=""
                 key={image}
                 className={classNames('product-details__product-image', {

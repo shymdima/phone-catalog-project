@@ -28,21 +28,21 @@ export const Homepage = () => {
         <div className="page__category__container">
           <div className="page__category">
             <Category
-              img="/img/other/phones-category.png"
+              img="./img/other/phones-category.png"
               title="Phones"
               amount={95}
             />
           </div>
           <div className="page__category">
             <Category
-              img="/img/other/tablets-category.png"
+              img="./img/other/tablets-category.png"
               title="Tablets"
               amount={95}
             />
           </div>
           <div className="page__category">
             <Category
-              img="/img/other/accessories-category.png"
+              img="./img/other/accessories-category.png"
               title="Accessories"
               amount={95}
             />

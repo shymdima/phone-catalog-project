@@ -10,14 +10,14 @@ export const FirstBanner = () => {
         </span>
         <span className="banner-span">be the first!</span>
         <Link
-          to={'/img/phones/apple-iphone-14-pro-128gb-spaceblack'}
+          to={'/phones/apple-iphone-14-pro-128gb-spaceblack'}
           className="banner-link"
         >
           order now
         </Link>
       </div>
       <Link
-        to={'/img/phones/apple-iphone-14-pro-128gb-spaceblack'}
+        to={'./img/phones/apple-iphone-14-pro-128gb-spaceblack'}
         className="banner-image"
       ></Link>
     </div>
