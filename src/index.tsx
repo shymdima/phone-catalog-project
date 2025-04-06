@@ -1,12 +1,12 @@
 import { createRoot } from 'react-dom/client';
 import { App } from './App';
-import { BrowserRouter } from 'react-router-dom';
 import { ContextProvider } from './utils/contexts';
+import { HashRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <ContextProvider>
-    <BrowserRouter>
+     <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </ContextProvider>,
 );
