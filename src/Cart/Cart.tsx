@@ -23,8 +23,7 @@ export const Cart = () => {
         <IconsBar pageType="cart" />
         <h2 className="title">Cart</h2>
         {cart.length === 0 ? (
-          <div className="cart__empty">
-          </div>
+          <div className="cart__empty"></div>
         ) : (
           <>
             <div className="cart__cards">
