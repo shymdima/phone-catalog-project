@@ -5,7 +5,7 @@ import { HashRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <ContextProvider>
-     <HashRouter>
+    <HashRouter>
       <App />
     </HashRouter>
   </ContextProvider>,

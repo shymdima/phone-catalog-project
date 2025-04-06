@@ -171,7 +171,7 @@ export const ProductDetailsPage: React.FC<Props> = ({ productType }) => {
                 return (
                   <Link
                     to={`/${productType}/${productId.replace(
-                      /(\d+(?:gb|mm))/,
+                      /(\d+(?:gb|mm|tb))/,
                       capacityButton.toLowerCase(),
                     )}`}
                     className={classNames(
